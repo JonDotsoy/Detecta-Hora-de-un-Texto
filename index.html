@@ -4,33 +4,38 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<title>Parse Horas</title>
-		<script src="bower_components/angular/angular.js"></script>
+		<link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
+		<script src="bower_components/angular/angular.min.js"></script>
 		<script src="script/app.js"></script>
 	</head>
 	<body ng-app="app" ng-controller="detectaHora">
-		<h1>Detectar Hora desde un texto</h1><br>
-		Cargar texto
-		<select ng-model="text">
-			<option value="Tengo mis tareas a las 20horas.">Ejemplo 1</option>
-			<option value="Las reunión comienza a las 30H y 10m.">Ejemplo 2</option>
-			<option value="Militar Alcon: Hemos terminado las tareas a las 1600 Horas y 34 Segundos.">Ejemplo 3</option>
-			<option value="El programa reporta 3 Segundos por cada fila agregada.">Ejemplo 4</option>
-			<option value="Reunion a las 12:30 hrs.">Ejemplo 5</option>
-			<option value="Reunion a las 12 hrsSalsa.">Error Ejemplo 1</option>
-		</select>
-		<br>
-		<textarea type="text" ng-model="text" cols="80" rows="10"></textarea>
-		<hr>
-		Detalles encontrados
-		<dl>
-			<dt>Hora</dt>
-			<dd ng-if="dato.hora">{{ dato.hora }} Hrs.</dd>
-			<dt>Hora Militar</dt>
-			<dd ng-if="dato.horam">{{ dato.horam }} Horas.</dd>
-			<dt>Minutos</dt>
-			<dd ng-if="dato.minuto">{{ dato.minuto }} Min.</dd>
-			<dt>Segundos</dt>
-			<dd ng-if="dato.segundo">{{ dato.segundo }} Seg.</dd>
-		</dl>
+		<div class="layout">
+			<div class="content">
+				<h1>Detectar Hora desde un texto</h1><br>
+				Cargar texto
+				<select ng-model="text">
+					<option value="Tengo mis tareas a las 20horas.">Ejemplo 1</option>
+					<option value="Las reunión comienza a las 30H y 10m.">Ejemplo 2</option>
+					<option value="Militar Alcon: Hemos terminado las tareas a las 1600 Horas y 34 Segundos.">Ejemplo 3</option>
+					<option value="El programa reporta 3 Segundos por cada fila agregada.">Ejemplo 4</option>
+					<option value="Reunion a las 12:30 hrs.">Ejemplo 5</option>
+					<option value="Reunion a las 12 hrsSalsa.">Error Ejemplo 1</option>
+				</select>
+				<br>
+				<textarea type="text" ng-model="text" cols="80" rows="10"></textarea>
+				<hr>
+				Detalles encontrados
+				<dl>
+					<dt>Hora</dt>
+					<dd ng-if="dato.hora">{{ dato.hora }} Hrs.</dd>
+					<dt>Hora Militar</dt>
+					<dd ng-if="dato.horam">{{ dato.horam }} Horas.</dd>
+					<dt>Minutos</dt>
+					<dd ng-if="dato.minuto">{{ dato.minuto }} Min.</dd>
+					<dt>Segundos</dt>
+					<dd ng-if="dato.segundo">{{ dato.segundo }} Seg.</dd>
+				</dl>
+			</div>
+		</div>
 	</body>
 </html>

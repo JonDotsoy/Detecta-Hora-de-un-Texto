@@ -1,2 +1,13 @@
-bower_components/
-# bower_components/angular/angular.js
+bower_components/angular/README.md
+bower_components/angular/angular.min.js.gzip
+bower_components/angular/angular.min.js.map
+bower_components/angular/.bower.json
+bower_components/pure/
+bower_components/normalize.css/LICENSE.md
+bower_components/normalize.css/README.md
+bower_components/normalize.css/bower.json
+bower_components/angular/angular-csp.css
+bower_components/angular/angular.js
+bower_components/normalize.css/.bower.json
+bower_components/angular/bower.json
+bower_components/angular/package.json
